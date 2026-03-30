@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <div>
-      <div className="container mx-auto px-10 navbar bg-base-100 shadow-sm">
+      <div className="container mx-auto lg:px-10 navbar bg-base-100 shadow-sm">
         <div className="navbar-start">
           <div className="dropdown">
             <div
@@ -46,9 +46,20 @@ const Navbar = () => {
               <li>
                 <a>FAQ</a>
               </li>
+              <li>
+                <a>
+                  <img
+                    src="/src/assets/images/shopping-cart.png"
+                    alt="shoping-cart"
+                  />
+                </a>
+              </li>
+              <li>
+                <a className="">Login</a>
+              </li>
             </ul>
           </div>
-          <a className="font-extrabold text-3xl bg-linear-to-r from-[#4F39F6] to-[#9514F5] bg-clip-text text-transparent">
+          <a className="font-extrabold text-xl md:text-3xl bg-linear-to-r from-[#4F39F6] to-[#9514F5] bg-clip-text text-transparent">
             DigiTools
           </a>
         </div>
@@ -72,13 +83,13 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end gap-1">
-          <a className="btn btn-ghost rounded-4xl">
+          <a className="btn btn-ghost rounded-4xl hidden md:flex">
             <img
               src="/src/assets/images/shopping-cart.png"
               alt="shoping-cart"
             />
           </a>
-          <a className="btn btn-ghost rounded-4xl">Login</a>
+          <a className="btn btn-ghost rounded-4xl hidden md:flex">Login</a>
           <a className="btn bg-linear-to-r from-[#4F39F6] to-[#9514F5] text-white rounded-4xl">
             Get Started
           </a>
