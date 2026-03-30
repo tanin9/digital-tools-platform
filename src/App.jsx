@@ -9,8 +9,7 @@ function App() {
 
   return (
     <>
-      <div className="btn btn-primary">hello world</div>
-      <Navbar></Navbar>
+       <Navbar></Navbar>
       <Board></Board>
       <Footer></Footer>
       
