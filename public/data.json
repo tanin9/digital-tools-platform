@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "name": "AI Writing Pro",
+    "image": "https://i.ibb.co.com/5hhBFRCC/writing-2327400-1.png",
+    "description": "Generate high-quality content, blogs, and marketing copy in seconds with advanced AI.",
+    "price": "$29/month",
+    "features": [
+      "Unlimited AI generations",
+      "50+ writing templates",
+      "Grammar checker"
+    ],
+    "badge": "Best Seller"
+  },
+  {
+    "id": 2,
+    "name": "Design Templates Pack",
+    "image": "https://i.ibb.co.com/ZRdKgBcb/design-tool-2062942-1.png",
+    "description": "2000+ premium templates for social media, presentations, and marketing materials.",
+    "price": "$49/one-time",
+    "features": ["2000+ templates", "Monthly updates", "Commercial license"],
+    "badge": "Popular"
+  },
+  {
+    "id": 3,
+    "name": "Premium Stock Assets",
+    "image": "https://i.ibb.co.com/r2w3vKc4/camera-8775444-1.png",
+    "description": "Access millions of royalty-free photos, videos, and graphics for your projects.",
+    "price": "$19/month",
+    "features": ["10M+ assets", "Commercial use", "No attribution"],
+    "badge": "New"
+  },
+  {
+    "id": 4,
+    "name": "Automation Toolkit",
+    "image": "https://i.ibb.co.com/60d9G9nX/operation-11826522-1.png",
+    "description": "Automate repetitive tasks and streamline your workflow with powerful tools.",
+    "price": "$79/month",
+    "features": ["50+ automations", "API access", "Custom workflows"],
+    "badge": "Popular"
+  },
+  {
+    "id": 5,
+    "name": "Resume Builder Pro",
+    "image": "https://i.ibb.co.com/PvcyMbtc/portfolio-1153845-1.png",
+    "description": "Create professional resumes and cover letters that land interviews.",
+    "price": "$15/one-time",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF"],
+    "badge": "New"
+  },
+  {
+    "id": 6,
+    "name": "Social Media Content Kit",
+    "image": "https://i.ibb.co.com/d47sC5YP/social-media-2065203-1.png",
+    "description": "Complete toolkit for creating engaging social media content across all platforms.",
+    "price": "$39/month",
+    "features": ["5000+ assets", "Scheduler included", "Analytics dashboard"],
+    "badge": "Best Seller"
+  }
+]
