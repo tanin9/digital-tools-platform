@@ -5,10 +5,10 @@ import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
     return (
       <div className="container mx-auto  ">
-        <footer className="footer sm:footer-horizontal bg-[#101727]  text-gray-400 p-10 lg:p-20">
+        <footer className="footer grid grid-cols-2 md:grid-cols-5 md:justify-items-end bg-[#101727]  text-gray-400 p-10 lg:p-20">
           <nav>
             <h6 className=" font-bold text-white text-3xl">DigiTools</h6>
-            <p className="link link-hover lg:w-[70vh]">
+            <p className="link link-hover  ">
               Premium digital tools for creators, professionals, and businesses.
               Work smarter with our suite of powerful tools.
             </p>

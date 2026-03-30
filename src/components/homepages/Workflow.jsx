@@ -3,7 +3,7 @@ import React from 'react';
 const Workflow = () => {
     return (
       <div
-        className="container mx-auto my-4 bg-linear-to-r from-[#4F39F6] to-[#9514F5]
+        className="container mx-auto mt-4 bg-linear-to-r from-[#4F39F6] to-[#9514F5]
        text-white font-bold p-[5vh] "
       >
         <div className=" flex flex-col justify-center items-center">

@@ -8,19 +8,15 @@ const Badge = () => {
       >
         <div className=" flex flex-col justify-center items-center">
           <p className="text-[4vh] lg:text-[8vh]   ">50K+</p>
-          <p className="text-[1vh] lg:text-[3vh] font-semibold ">
-            Active Users
-          </p>
+          <p className="text-[1vh] lg:text-[3vh] font-light">Active Users</p>
         </div>
         <div className=" flex flex-col justify-center items-center">
           <p className="text-[4vh] lg:text-[8vh]   ">200+</p>
-          <p className="text-[1vh] lg:text-[3vh] font-semibold ">
-            Premium Tools
-          </p>
+          <p className="text-[1vh] lg:text-[3vh] font-light ">Premium Tools</p>
         </div>
         <div className=" flex flex-col justify-center items-center">
           <p className="text-[4vh] lg:text-[8vh]   ">4.9</p>
-          <p className="text-[1vh] lg:text-[3vh] font-semibold ">Rating</p>
+          <p className="text-[1vh] lg:text-[3vh] font-light ">Rating</p>
         </div>
       </div>
     );
