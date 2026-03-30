@@ -5,7 +5,7 @@ import { CgMediaLive } from "react-icons/cg";
 const Board = () => {
     return (
       <div className="container mx-auto grid md:grid-cols-2 py-4 px-7 justify-around items-center gap-3">
-        <div>
+        <div className="md:px-0 lg:px-12 space-y-4">
           <div className="bg-[#e1e7ff] rounded-2xl px-3 py-1 w-fit flex items-center gap-1">
             <CgMediaLive className="text-[#4F39F6]" />
             <p className="bg-linear-to-r from-[#4F39F6] to-[#9514F5] bg-clip-text text-transparent">
@@ -13,7 +13,7 @@ const Board = () => {
             </p>
           </div>
           <div>
-            <p className="font-extrabold  text-[40px] lg:text-[72px]">
+            <p className="font-extrabold  text-[4vh] lg:text-[8vh]">
               Supercharge Your Digital Workflow
             </p>
           </div>

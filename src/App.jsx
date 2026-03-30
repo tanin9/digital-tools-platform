@@ -1,6 +1,7 @@
 import './App.css'
 import Board from './components/homepages/Board'
 import Badge from "./components/homepages/Badge";
+import Workflow from "./components/homepages/Workflow";
 import Footer from './components/homepages/Footer'
 import Navbar from './components/navbar/Navbar'
 
@@ -13,6 +14,7 @@ function App() {
       <Navbar></Navbar>
       <Board></Board>
       <Badge></Badge>
+      <Workflow></Workflow>
       <Footer></Footer>
     </>
   );
