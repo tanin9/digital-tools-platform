@@ -7,7 +7,7 @@ const Steps = () => {
   return (
     <div className="container mx-auto bg-[#f9fafc] my-25 py-18">
       <div className="flex flex-col justify-center items-center space-y-2">
-        <p className="font-extrabold text-5xl">Get Started in 3 Steps</p>
+        <p className="font-extrabold text-2xl md:text-5xl">Get Started in 3 Steps</p>
         <p className="font-light text-[1.4vh] text-gray-400">
           Start using premium digital tools in minutes, not hours.
         </p>
