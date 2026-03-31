@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaCheck } from "react-icons/fa";
+import { toast } from 'react-toastify';
 const Card = ({ toolData, carts, setCarts }) => {
   const tagStyles = {
     "best-seller": "bg-yellow-100 text-yellow-700",
@@ -9,7 +10,8 @@ const Card = ({ toolData, carts, setCarts }) => {
   const [isSelected, seclected] = useState(false);
   const handleCarts = () => {
       seclected(true)
-          setCarts([...carts,toolData]);
+      setCarts([...carts, toolData]);
+      toast.success("Item add to cart!")
   };
 
   return (

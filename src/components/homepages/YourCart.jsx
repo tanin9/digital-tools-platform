@@ -1,11 +1,20 @@
-import React from "react";
-import { CiShoppingCart } from "react-icons/ci";
+import React from "react"; 
+import { toast } from "react-toastify";
 const YourCart = ({ carts, setCarts }) => {
   const totalPrice = carts.reduce((sum, item) => sum + item.price, 0);
 
   const handelPayment = () => {
-    setCarts([]);
-  };
+      setCarts([]);
+        toast.success("Payment Successfully!")
+      
+    };
+    
+    const handelRemove = (data) => {
+        const filterArray = carts.filter(cart => cart.id !== data.id);
+        setCarts(filterArray);
+        toast.error("Removed the item!");
+        
+     };
 
   return (
     <div className="container mx-auto">
@@ -42,7 +51,7 @@ const YourCart = ({ carts, setCarts }) => {
                     </div>
                   </div>
                   <div>
-                    <button className="btn btn-ghost rounded-4xl text-red-600 font-semibold p-2">
+                    <button onClick={()=> handelRemove(item)} className="btn btn-ghost rounded-4xl text-red-600 font-semibold p-2">
                       Remove
                     </button>
                   </div>
