@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { FaCheck } from "react-icons/fa";
-const Card = ({ toolData }) => {
-     const tagStyles = {
-        "best-seller": "bg-yellow-100 text-yellow-700",
-        popular: "bg-blue-100 text-blue-700",
-        new: "bg-green-100 text-green-700",
-    };
-    const [isSelected, seclected] = useState(false);
+const Card = ({ toolData, carts, setCarts }) => {
+  const tagStyles = {
+    "best-seller": "bg-yellow-100 text-yellow-700",
+    popular: "bg-blue-100 text-blue-700",
+    new: "bg-green-100 text-green-700",
+  };
+  const [isSelected, seclected] = useState(false);
+  const handleCarts = () => {
+      seclected(true)
+          setCarts([...carts,toolData]);
+  };
 
   return (
     <div className="h-full ">
@@ -36,8 +40,11 @@ const Card = ({ toolData }) => {
         </div>
         <div className="grow">
           <ul className="space-y-2">
-            {toolData.features.map((feature) => (
-              <li className="flex items-center gap-2 text-sm text-gray-600">
+            {toolData.features.map((feature, id) => (
+              <li
+                key={id}
+                className="flex items-center gap-2 text-sm text-gray-600"
+              >
                 <FaCheck className="text-green-600" />
                 {feature}
               </li>
@@ -46,10 +53,16 @@ const Card = ({ toolData }) => {
         </div>
         <div className="mt-auto">
           <button
-            className="btn w-full bg-linear-to-r from-[#4F39F6] to-[#9514F5] text-white  rounded-4xl"
-            onClick={() => seclected(true)}
+            className={`btn w-full ${isSelected === true ? "bg-green-500" : "bg-linear-to-r from-[#4F39F6] to-[#9514F5]"} text-white  rounded-4xl`}
+            onClick={handleCarts}
           >
-            {isSelected === true ? "Add to Cart" : "Buy Now"}
+            {isSelected === true ? (
+              <p className="flex items-center gap-2">
+                <FaCheck /> Add to Cart
+              </p>
+            ) : (
+              "Buy Now"
+            )}
           </button>
         </div>
       </div>

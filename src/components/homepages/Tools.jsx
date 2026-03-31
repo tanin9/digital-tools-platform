@@ -3,16 +3,19 @@ import AvailableTools from "./AvailableTools";
 import YourCart from "./YourCart";
 
 const Tools = ({ toolsDataPromise }) => {
- 
   const toolsData = use(toolsDataPromise);
-  
+
+
+  const [carts, setCarts] = useState([]);
+  // console.log(carts);
   const [selectedType, setSelectedType] = useState("product");
-  console.log(selectedType);
-  
 
   return (
     <div className="container mx-auto">
-      <div className="my-3 flex gap-2 justify-center items-center mb-6">
+      <div
+        className="my-3 w-fit rounded-4xl p-0.5 mx-auto flex
+       justify-center items-center mb-6 bg-[#cec9f2] "
+      >
         <a
           onClick={() => setSelectedType("product")}
           className={`btn rounded-4xl ${
@@ -31,13 +34,20 @@ const Tools = ({ toolsDataPromise }) => {
               : "bg-white text-[#4F39F6]}"
           }`}
         >
-          Cart<span>(2)</span>
+          Cart<span>({carts.length})</span>
         </a>
       </div>
       {selectedType === "product" ? (
-        <AvailableTools toolsData={toolsData} />
+        <AvailableTools
+          toolsData={toolsData}
+          carts={carts}
+          setCarts={setCarts}
+        />
       ) : (
-        <YourCart/>
+        <YourCart
+          carts={carts}
+          setCarts={setCarts}
+        />
       )}
       {}
     </div>
@@ -45,7 +55,6 @@ const Tools = ({ toolsDataPromise }) => {
 };
 
 export default Tools;
-
 
 // {/* <div className="container mx-auto">
 //     <div className="my-3 flex gap-2 justify-center items-center">
