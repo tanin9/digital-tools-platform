@@ -2,11 +2,10 @@ import React, { use, useState } from "react";
 import AvailableTools from "./AvailableTools";
 import YourCart from "./YourCart";
 
-const Tools = ({ toolsDataPromise }) => {
+const Tools = ({ toolsDataPromise, carts, setCarts }) => {
   const toolsData = use(toolsDataPromise);
 
-
-  const [carts, setCarts] = useState([]);
+  // const [carts, setCarts] = useState([]);
   // console.log(carts);
   const [selectedType, setSelectedType] = useState("product");
 
@@ -56,14 +55,3 @@ const Tools = ({ toolsDataPromise }) => {
 
 export default Tools;
 
-// {/* <div className="container mx-auto">
-//     <div className="my-3 flex gap-2 justify-center items-center">
-//       <a className="btn bg-white text-[#4F39F6] rounded-4xl">Products</a>
-//       <a className="btn bg-linear-to-r from-[#4F39F6] to-[#9514F5] text-white rounded-4xl">
-//         Cart<span>(2)</span>
-//       </a>
-//       {/* <a className="btn bg-white text-[#4F39F6] rounded-4xl">Products</a>
-//         <a className="btn bg-linear-to-r from-[#4F39F6] to-[#9514F5] text-white rounded-4xl">
-//           Cart<span>(2)</span>
-//         </a> */}
-//     </div> */}

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Navbar = () => {
+const Navbar = ({ carts}) => {
   return (
     <div>
       <div className="container mx-auto lg:px-10 navbar bg-base-100 shadow-sm">
@@ -46,15 +46,22 @@ const Navbar = () => {
               <li>
                 <a>FAQ</a>
               </li>
-              <li>
+              <li className="md:hidden">
                 <a>
                   <img
                     src="/src/assets/images/shopping-cart.png"
                     alt="shoping-cart"
                   />
+                  {carts > 0 && (
+                    <span className="absolute -top-1  left-7 bg-red-500
+                     text-white text-xs font-bold w-5 h-5 rounded-full
+                     flex items-center justify-center">
+                      {carts}
+                    </span>
+                  )}
                 </a>
               </li>
-              <li>
+              <li className="md:hidden">
                 <a className="">Login</a>
               </li>
             </ul>
@@ -83,11 +90,18 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end gap-1">
-          <a className="btn btn-ghost rounded-4xl hidden md:flex">
+          <a className="btn btn-ghost rounded-4xl hidden md:flex relative">
             <img
               src="/src/assets/images/shopping-cart.png"
-              alt="shoping-cart"
+              alt="shopping-cart"
             />
+            {carts > 0 && (
+              <span className="absolute -top-1 -right-1 bg-red-500
+               text-white text-xs font-bold w-5 h-5 rounded-full
+                flex items-center justify-center">
+                {carts}
+              </span>
+            )}
           </a>
           <a className="btn btn-ghost rounded-4xl hidden md:flex">Login</a>
           <a className="btn bg-linear-to-r from-[#4F39F6] to-[#9514F5] text-white rounded-4xl">

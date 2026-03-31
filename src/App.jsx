@@ -7,7 +7,7 @@ import Navbar from './components/navbar/Navbar'
 import Pricing from './components/homepages/Pricing';
 import Steps from './components/homepages/Steps';
 import Tools from './components/homepages/Tools';
-import { Suspense } from 'react';
+import { Suspense, useState } from 'react';
 
 const fetchToolsData = async () => {
   const res = await fetch("/data.json");
@@ -17,15 +17,24 @@ const fetchToolsData = async () => {
 function App() {
   const toolsDataPromise = fetchToolsData();
 
+  // const [cartsCount, setCartsCount] = useState([]);
+  const [carts, setCarts] = useState([]);
+
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar carts={carts.length}></Navbar>
       <Board></Board>
       <Badge></Badge>
       <Suspense
-        fallback={<span className="loading loading-infinity loading-xl text-blue-400"></span>}
+        fallback={
+          <span className="loading loading-infinity loading-xl text-blue-400"></span>
+        }
       >
-        <Tools toolsDataPromise={toolsDataPromise} />
+        <Tools
+          toolsDataPromise={toolsDataPromise}
+          carts={carts} 
+          setCarts={setCarts} 
+        />
       </Suspense>
 
       <Steps></Steps>

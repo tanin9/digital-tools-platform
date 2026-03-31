@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 const Card = ({ toolData, carts, setCarts }) => {
   const tagStyles = {
     "best-seller": "bg-yellow-100 text-yellow-700",
@@ -9,16 +9,29 @@ const Card = ({ toolData, carts, setCarts }) => {
   };
   const [isSelected, seclected] = useState(false);
   const handleCarts = () => {
-      seclected(true)
-      setCarts([...carts, toolData]);
-      toast.success("Item add to cart!")
+    seclected(true);
+
+    const isFound = carts.find((data) => data.id === toolData.id);
+      if (isFound)
+      {
+          toast.error("Item already in cart!");
+          return;
+      }
+
+    setCarts([...carts, toolData]);
+    toast.success("Item add to cart!");
   };
 
   return (
     <div className="h-full ">
-      <div className="flex flex-col h-full space-y-4 px-8 py-6 border border-gray-200 rounded-3xl">
-        <div className="flex justify-between">
-          <div className="border border-gray-200 rounded-full p-3">
+      <div
+        className="transition delay-150 duration-300 ease-in-out
+       hover:-translate-y-1 hover:scale-110 hover:bg-white hover:mt-2 hover:border-[#4F39F6]
+         flex flex-col h-full space-y-4 px-8 py-6 bg-gray-100 border
+         border-gray-200 rounded-3xl"
+      >
+        <div className="flex justify-between ">
+          <div className="border border-gray-200 rounded-full p-3 ">
             <img
               src={toolData.icon}
               alt=""
