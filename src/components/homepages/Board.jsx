@@ -1,4 +1,5 @@
 import React from "react";
+import bannerImage from "../../assets/images/banner.png"; 
 import { CiPlay1 } from "react-icons/ci";
 import { CgMediaLive } from "react-icons/cg";
 import { FaArrowRight } from "react-icons/fa6";
@@ -47,7 +48,7 @@ const Board = () => {
       <div className="flex justify-center">
         <img
           className=" h-[50vh] lg:h-[62vh]"
-          src="/src/assets/images/banner.png"
+          src={bannerImage}
           alt=""
         />
       </div>

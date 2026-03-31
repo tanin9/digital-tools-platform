@@ -1,5 +1,5 @@
 import React from "react";
-
+import cartImage from "../../assets/images/shopping-cart.png";
 const Navbar = ({ carts}) => {
   return (
     <div className="sticky top-0 z-12 ">
@@ -49,13 +49,15 @@ const Navbar = ({ carts}) => {
               <li className="md:hidden">
                 <a>
                   <img
-                    src="/src/assets/images/shopping-cart.png"
+                    src={cartImage}
                     alt="shoping-cart"
                   />
                   {carts > 0 && (
-                    <span className="absolute -top-1  left-7 bg-red-500
+                    <span
+                      className="absolute -top-1  left-7 bg-red-500
                      text-white text-xs font-bold w-5 h-5 rounded-full
-                     flex items-center justify-center">
+                     flex items-center justify-center"
+                    >
                       {carts}
                     </span>
                   )}
@@ -92,13 +94,15 @@ const Navbar = ({ carts}) => {
         <div className="navbar-end gap-1">
           <a className="btn btn-ghost rounded-4xl hidden md:flex relative">
             <img
-              src="/src/assets/images/shopping-cart.png"
+              src={cartImage}
               alt="shopping-cart"
             />
             {carts > 0 && (
-              <span className="absolute -top-1 -right-1 bg-red-500
+              <span
+                className="absolute -top-1 -right-1 bg-red-500
                text-white text-xs font-bold w-5 h-5 rounded-full
-                flex items-center justify-center">
+                flex items-center justify-center"
+              >
                 {carts}
               </span>
             )}
